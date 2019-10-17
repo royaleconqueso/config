@@ -1,0 +1,30 @@
+
+
+backtick 1 30 30 $HOME/bin/screen-battery
+caption always " | %-w%{= BW}%50>%n %t%{-}%+w  |%< %=%c:%s | %m/%d/%Y | %{-}%1`%:%% | "
+hardstatus string " %{.kY}%-w%{.k}%n %t%{-}%{=b kY}%?%+w%? %=%c:%s %m/%d/%Y %{-}%1`%:%%  " #B&W & date&time
+
+vbell off
+
+startup_message off
+
+#https://superuser.com/questions/882759/gnu-screen-utmp-slot-not-found
+deflogin off
+
+screen -t quant 0  ssh -v myserver.org
+screen -t wnyc 1
+screen -t ff 2
+#screen -t other 3 
+
+#https://bbs.archlinux.org/viewtopic.php?id=55618
+
+#https://www.gilesorr.com/blog/screen-backtick.html
+#!/bin/bash
+#    I saved this as '~/bin/screen-battery'
+# 2019-10-17: generate a number for a backtick command in screen, just
+# the current battery percentage. BAT? won't work in OSX
+#if [ -d /sys/class/power_supply/BAT?/ ]
+#then
+#    cat /sys/class/power_supply/BAT?/capacity
+#fi
+
