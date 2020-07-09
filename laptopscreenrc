@@ -1,5 +1,3 @@
-
-
 backtick 1 30 30 $HOME/bin/screen-battery
 caption always " | %-w%{= BW}%50>%n %t%{-}%+w  |%< %=%c:%s | %m/%d/%Y | %{-}%1`%:%% | "
 hardstatus string " %{.kY}%-w%{.k}%n %t%{-}%{=b kY}%?%+w%? %=%c:%s %m/%d/%Y %{-}%1`%:%%  " #B&W & date&time
@@ -11,7 +9,7 @@ startup_message off
 #https://superuser.com/questions/882759/gnu-screen-utmp-slot-not-found
 deflogin off
 
-screen -t quant 0  ssh -v myserver.org
+screen -t quant 0  ssh -v quantifier.org
 screen -t wnyc 1
 screen -t ff 2
 #screen -t other 3 
@@ -27,4 +25,5 @@ screen -t ff 2
 #then
 #    cat /sys/class/power_supply/BAT?/capacity
 #fi
+
 
