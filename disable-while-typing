@@ -1,0 +1,2 @@
+#https://ostechnix.com/disable-touchpad-while-typing-in-ubuntu-using-syndaemon/
+syndaemon -i 2 -t -K -R -d
