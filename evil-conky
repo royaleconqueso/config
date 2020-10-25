@@ -1,0 +1,39 @@
+#####################
+# - Text settings - #
+#####################
+use_xft yes
+xftfont Sans:size=14
+
+######################
+# - Conky settings - #
+######################
+xftalpha 0.9
+update_interval 15
+net_avg_samples 1
+cpu_avg_samples 1
+total_run_times 0
+double_buffer yes
+
+#############################
+# - Window specifications - #
+#############################
+alignment bottom_right
+gap_x 5
+gap_y 5
+
+#########################
+# - Graphics settings - #
+#########################
+draw_shades no
+draw_borders no
+
+default_color white
+default_shade_color red
+color1 blue
+color2 grey
+
+TEXT
+${if_match ${desktop}==1}${color white}/1/${else}${color dimgray}1${endif} ${if_match ${desktop}==2}${color white}/2/${else}${color dimgray}2${endif} ${if_match ${desktop}==3}${color white}/3/${else}${color dimgray}3${endif} ${if_match ${desktop}==4}${color white}/4/${else}${color dimgray}4${endif}  ${color gray}[${exec cat /home/brock/.config/conky/wny.txt}°] ${color3}${time %a}, ${color3}${time %d} ${time %b} ${time %Y} ${color5}[${color2}${battery_percent}%]${color2}${exec amixer -c 0 get Master | grep Mono: | cut -d " " -f6} ${color4}${time %H:%M}
+#${if_match ${desktop}==1}${color white}[1]${else}${color dimgray}[1]${endif} ${if_match ${desktop}==2}${color white}[2]${else}${color dimgray}[2]${endif} ${if_match ${desktop}==3}${color white}[3]${else}${color dimgray}[3]${endif} ${if_match ${desktop}==4}${color white}[4]${else}${color dimgray}[4]${endif} ${color3}${time %a}, ${color3}${time %d} ${time %b} ${time %Y} ${color5}[${color2}${battery_percent}%]${color2}${exec amixer -c 0 get Master | grep Mono: | cut -d " " -f6} ${color4}${time %H:%M}
+#${color2}${downspeedgraph wlan0 8,48 black black}${color D45959} ${color2}${upspeedgraph wlan0 8,48 black black} ${color2}${cpugraph 8,48 black black}  ${color3}${time %a}, ${color3}${time %d} ${time %b} ${time %Y} ${color5} [${color2}${battery_percent}%] ${color2}${exec amixer -c 0 get Master | grep Mono: | cut -d " " -f6} ${color4}${time %H:%M}
+# 
