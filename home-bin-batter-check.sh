@@ -5,7 +5,7 @@
 SLEEP_TIME="600"
 
 #actions
-ACTION="lxterminal -x sudo shutdown -h now"
+ACTION="xterm -x sudo shutdown -h now"
 
 #helping variables
 INFO_20=0;
@@ -24,19 +24,19 @@ while [ true ]; do
 
     if (( $BATT<"5"));
       then
-        gxmessage -bg red -center -title 'Battery under 5%' -buttons yes:0,no:2 -default no 'Computer battery is under 5%. Do you want to shutdown?' -fg red && $($ACTION);
+        gxmessage -bg red -center -title '5% battery? Fuuuuuuccccckkkkk!' -buttons yes:0,no:2 -default no '5% battery? Fuuuuuuccccckkkkk!' -fg red && $($ACTION);
     elif (( $BATT<"7"));
       then
-        gxmessage -bg red -center -title 'Battery under 7%' -buttons ok:0 -default ok 'Computer battery is under 7%...';
+        gxmessage -bg yellow -center -title 'Hey fuck face! The battery is under 7%' -buttons ok:0 -default ok 'Hey fuck face! The battery is under 7%';
         INFO_10=0;
     elif (( $BATT<"10" && $INFO_10==0 ));
       then
-        gxmessage -bg red -center -title 'Battery under 10%' -buttons ok:0 -default ok 'Computer battery is under 10%...';
+        gxmessage -bg green -center -title 'Oh, Snap! Battery under 10%' -buttons ok:0 -default ok 'Oh, Snap! Battery under 10%...';
         INFO_10=1;
         INFO_20=0;
     elif (( $BATT<"20" && $INFO_20==0 ));
       then
-        gxmessage -bg red -center -title 'Battery under 15%' -buttons ok:0 -default ok 'Computer battery is under 15%...';
+        gxmessage -bg blue -center -title 'Maybe plug in. Battery under 15%' -buttons ok:0 -default ok 'Maybe plug in. Battery under 15%...';
         INFO_20=1;
     fi
   fi
