@@ -1,0 +1,8 @@
+
+
+pihole -w pandora.com tuner.pandora.com cont-1.p-cdn.us cont-3.p-cdn.us cont-2.p-cdn.us cont-4.p-cdn.us cont-5.p-cdn.us audio-ch1-t1-1-v4v6.pandora.com audio-ch1-t1-2-v4v6.pandora.com audio-ch1-t2-1-v4v6.pandora.com audio-ch1-t3-2-v4v6.pandora.com audio-ch1-t2-2-v4v6.pandora.com audio-sv5-t3-2-v4v6.pandora.com audio-sv5-t2-2-v4v6.pandora.com audio-sv5-t1-2-v4v6.pandora.com audio-sv5-t2-1-v4v6.pandora.com audio-dc6-t2-2-v4v6.pandora.com audio-dc6-t1-2-v4v6.pandora.com audio-dc6-t1-1-v4v6.pandora.com audio-dc6-t2-1-v4v6.pandora.com audio-dc6-t3-2-v4v6.pandora.com mediaserver-cont-ch1-1-v4v6.pandora.com mediaserver-cont-ch1-2-v4v6.pandora.com mediaserver-cont-dc6-1-v4v6.pandora.com mediaserver-cont-dc6-2-v4v6.pandora.com mediaserver-cont-sv5-1-v4v6.pandora.com mediaserver-cont-sv5-2-v4v6.pandora.com mediaserver-cont-sv5-3-v4v6.pandora.com
+
+pihole -b t1-1.p-cdn.us t2-1.p-cdn.us t2-5.p-cdn.us t1-3.p-cdn.us t2-2.p-cdn.us t2-4.p-cdn.us t1-2.p-cdn.us t2-3.p-cdn.us t1-4.p-cdn.us t1-5.p-cdn.us t3-3.p-cdn.us t3-1.p-cdn.us t3-2.p-cdn.us t3-4.p-cdn.us t3-5.p-cdn.us pandoramedia.sc.omtrdc.net ad.pandora.tv ads.pandora.tv.net stats.pandora.com adserver.pandora.com pubads.g.doubleclick.net lt501.tritondigital.com ad.doubleclick.net z.moatads.com
+pihole -b t.pluto.tv k.pluto.tv nqs.nice264.com jelly.mdhv.io
+
+(ads|captive|logs)\.roku\.com$
