@@ -1,0 +1,63 @@
+#I messed with "commands" in the menu in WPrefs
+#from   http://debian.2.n7.nabble.com/Multimedia-Volume-Keys-Not-Working-td2867817.html
+#http://henning-liebenau.de/xchainkeys/
+        # (un)mute
+        #"amixer -c0 set Master toggle"
+        #        m:0x0 + c:121
+        #        # XF86AudioMute
+
+        # (un)mute
+        #"amixer -c0 set Master toggle"
+        #        m:0x0 + c:121
+        #        # XF86AudioMute
+
+# "xdotool mousemove 2400 15 && /usr/bin/firefox"
+# Control+Shift + f
+
+# "/usr/bin/firefox"
+# Control+Shift + f
+
+# "/usr/bin/telegram-desktop"
+# Mod4 + t
+# "/usr/bin/telegram-desktop"
+# Mod4 + t
+
+#replaced with ~/bin/lastttr.sh
+# "killall mpv && mpv --pulse-buffer=500 --cache=yes --cache-pause --playlist=/home/$USER/.config/lttr/lttrrc"
+# XF86Calculator
+
+# "lastttr.sh"
+# XF86Calculator
+
+# "killall mpv"
+# XF86AudioMute
+
+#amixer -c0 set Master 25-
+                 # XF86AudioLowerVolume
+                # XF86AudioRaiseVolume
+
+ "amixer -c0 set Master 5-"
+ XF86AudioLowerVolume
+
+ "amixer -c0 set Master 5+"
+ XF86AudioRaiseVolume
+
+
+ "/usr/bin/dmenu_run"
+ Control+Shift + d
+
+ "xrandr --output eDP-1 --brightness 0.7 &"
+ XF86Explorer
+
+ "xrandr --output eDP-1 --brightness 0.5 &"
+ XF86Tools
+
+ "xrandr --output HDMI-2 --brightness 0.7 &"
+ Mod4 + XF86Explorer
+
+ "xrandr --output HDMI-2 --brightness 0.5 &"
+ Mod4 + XF86Tools
+
+ "xterm"
+    Mod2+Mod4 + c
+

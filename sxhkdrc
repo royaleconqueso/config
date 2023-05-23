@@ -1,0 +1,88 @@
+# terminal emulator
+# pkill -USR1 -x sxhkd to "reload" or "restart"
+# https://douglasrizzo.com.br/sxkhd-masterkeys-pro-m-abnt2/
+ctrl + q
+	gxmessage "don't press that"
+
+### freebsd volume hack ################ https://douglasrizzo.com.br/sxkhd-masterkeys-pro-m-abnt2/
+#Pause
+#super + ctrl + alt + 9
+super + p
+	mixer vol +5
+
+super + x
+	mixer vol +5
+
+ctrl + super alt + KP_Multiply 
+	mixer vol +5
+
+#Scroll_Lock
+#super + ctrl + alt + 8
+super + o
+	mixer vol -5
+
+super + z
+	mixer vol -5
+
+ctrl + super + alt + KP_Divide 
+	mixer vol -5
+
+#super + KP_Subtract
+#	mixer vol 0
+#Print
+#	killall mpv
+#######################################
+
+super + Return
+        xfce4-terminal --drop-down
+
+ctrl + alt + Return
+        xfce4-terminal
+
+#########
+XF86AudioLowerVolume
+	amixer -c0 set Master 5-
+
+Print
+	amixer -c0 set Master 5-
+
+#############
+XF86AudioRaiseVolume
+	amixer -c0 set Master 5+
+
+Scroll_Lock
+	amixer -c0 set Master 5+
+
+#############
+XF86Calculator
+	lastttr.sh
+
+Pause
+	lastttr.sh
+
+XF86AudioMute
+	killall mpv
+
+
+ctrl + alt + shift + Return
+	xfce4-terminal --drop-down -x /home/brock/bin/c.sh &
+
+#ctrl + alt + y
+#	xdotool getactivewindow windowsize 3550 1960 && xdotool getactivewindow windowmove 278 0
+
+#ctrl + alt + u
+#	xdotool getactivewindow windowsize 3515 1905 && xdotool getactivewindow windowmove 0 210
+
+ctrl + alt + shift + q
+	xdotool getactivewindow windowsize 1000 800 && xdotool getactivewindow windowmove 0 0 && xdotool mousemove --sync 950 500
+
+ctrl + alt + shift + KP_5
+	exec /home/brock/bin/gpc/eth/exam/exam.sh
+
+ctrl + shift + f
+	firefox
+
+
+#amixer -c0 set Master 25-
+                 # XF86AudioLowerVolume
+                # XF86AudioRaiseVolume
