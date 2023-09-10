@@ -1,24 +1,23 @@
-
 exec /usr/bin/rpws init 2 -k
-exec alttab 
+exec alttab #https://github.com/sagb/alttab/blob/master/doc/wm-setup.md
 exec /usr/share/ratpoison/sloppy
 
 set winname title
 set wingravity center
 set transgravity center
-set bargravity center 
-set border 25   
-set padding 8 8 8 30
+set bargravity center
+set border 2.5
+set padding 6 6 6 32
 # barpadding              Set horizontal padding of ratpoison windows to x and vertical padding to y.
-set barpadding 5 5 
+set barpadding 5 5
 set barborder 15
 # inputwidth how wide the ratpoison message window is
-set inputwidth 999
+set inputwidth 300
 set font "DejaVu:size=32"
 # bwcolor The border color of unfocused windows.
-set bwcolor black
+set bwcolor gray
 # fwocolor The border color of focused windows.
-set fwcolor white
+set fwcolor darkgreen
 # bgcolor the color of ratpoison's notification box
 set bgcolor #778899
 set fgcolor black
@@ -37,7 +36,8 @@ bind C-Up exchangeup
 bind C-Down exchangedown
 
 # temporarily enter wmaker for pesky cases where you really need floating, like gimp
-bind W tmpwm wmaker
+#bind W tmpwm wmaker
+bind W tmpwm xfce4
 
 #set C-1 exec rpws1
 #set C-2 exec rpws2
