@@ -1,6 +1,12 @@
 #!/bin/bash
 export LC_ALL=C
 
+if ! [ -x "$(command -v zenity)" ]; then
+  echo "${bold}Oh, no! This script requires that you have zenity installed and available in your path. ${natural}Exiting..." >&2
+  exit 1
+fi
+
+
 readarray -t SCREENS < <(xrandr --listmonitors | grep "^ [0-9]\+: " | cut -d ' ' -f 6)
 [[ ${#SCREENS[@]} > 0 ]] || exit 1
 
